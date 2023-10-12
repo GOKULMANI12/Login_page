@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOG IN</title>
+    <style>
+        .box{
+            border: 2px solid #000000;
+          background-color: rgba(29, 1, 1,.3);
+           border-radius: 25px;
+        height: fit-content;
+        width: fit-content;
+        margin: 120px;
+        text-align: center;
+        }
+        input{
+            border-radius: 4px;
+          margin-bottom: 19px;
+        }
+        
+        div{
+            margin: 30px;
+            
+        }
+      
+        #button{
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div ><label>
+           NAME
+        </label>
+        <input id="name" type="text"></div>
+        <div >
+            <label >PASSWORD</label>
+            <input id="pass" type="password">
+        </div>
+        <div id="button" >
+            <button onclick="validate()">submit</button>
+        </div>
+        <h2 id="res"></h2>
+    </div>
+    <script type="text/javascript" >  
+     let a=["leo" ,"parthi" ,"horald das"];
+      let b=[123,456,678];
+    function validate(){
+            let c=document.getElementById('name').value;
+      
+         let pl=prompt();
+       let d=Number(document.getElementById('pass').value);
+           let f=0;
+        // console.log(d==b[0]);
+        // console.log(a[0]===c);
+         for(let i=0;i<a.length;i++){
+          
+            if(a[i]===(c)&&b[i]==d){
+            f=1;
+            break;
+            }
+        }
+        if(f==1)
+        alert(`HII MR . `+c);
+    else 
+    alert('wrong person');
+    }
+
+    
+    
+    </script>
+
+</body>
+</html>
